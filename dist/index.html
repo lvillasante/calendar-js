@@ -1,0 +1,60 @@
+<!DOCTYPE>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/calendar-lvillasante.min.css">
+    <title>Test JS</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container-calendar">
+          <div class="button-container-calendar">
+            <button id="previous" onclick="previous()">&#8249;</button>
+            <h3 id="monthAndYear"></h3>
+            <button id="next" onclick="next()">&#8250;</button>
+          </div>
+          
+          <table class="table-calendar" id="calendar" data-lang="es">
+              <thead id="thead-month"></thead>
+              <tbody id="calendar-body"></tbody>
+          </table>
+
+          <div class="container-show-todays-date">
+            <button onclick="showTodaysDate()">Mostrar de la fecha de hoy &#8250;</button>
+            <span id="show-tadays-date"></span>
+          </div>
+
+          <div class="container-show-date">
+            <span class="text-select-sdate">
+              Fecha seleccionada:   
+            </span>
+            <span id="show-date"></span>
+          </div>
+          
+          <div class="footer-container-calendar">
+              <label for="month">Saltar a: </label>
+              <select id="month" onchange="jump()">
+                  <option value=0>Enero</option>
+                  <option value=1>Febrero</option>
+                  <option value=2>Marzo</option>
+                  <option value=3>Abril</option>
+                  <option value=4>Mayo</option>
+                  <option value=5>Junio</option>
+                  <option value=6>Julio</option>
+                  <option value=7>Agosto</option>
+                  <option value=8>Septiembre</option>
+                  <option value=9>Octubre</option>
+                  <option value=10>Noviembre</option>
+                  <option value=11>Diciembre</option>
+              </select>
+              <select id="year" onchange="jump()"></select>       
+          </div>
+      </div>
+    </div>
+    <script src="js/moment.min.js" type="text/javascript"></script>
+    <script src="js/es.js" type="text/javascript"></script>
+    <script src="js/calendar.js" type="text/javascript"></script>
+  </body>
+</html>
+
